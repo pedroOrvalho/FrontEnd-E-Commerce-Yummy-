@@ -43,3 +43,8 @@
 3. Icons (`https://mui.com/material-ui/material-icons/#main-content`)
 4. Button (`https://mui.com/material-ui/react-button/#main-content`)
 5. Badge: (`https://mui.com/material-ui/react-badge/#main-content`)
+
+## Hints
+
+- You will need 3 states in this project
+- CSS:clip-path. Read more here: `https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path`
