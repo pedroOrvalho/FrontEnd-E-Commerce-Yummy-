@@ -1,38 +1,61 @@
-.App {
+/*--------------------------- Navbar ---------------------------*/
+.navbar_container {
+  display: flex;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  align-items: center;
+}
+
+.nav_logo {
+  width: 60px;
+}
+
+.nav_list {
+  display: flex;
+}
+
+.nav_list li {
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
+
+/*--------------------------- Home ---------------------------*/
+
+.home_pic{
+  display: flex;
+  height: 42rem;
+  width: 100%;
+  background-image: url("./images/home/food.jpeg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.home_content{
+  margin: 4rem 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home_content h2{
+  margin-top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home_content p{
+  padding: 1rem 0rem;
+  padding-bottom: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.round_pic_container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.round_pic{
+  border-radius: 100px;
+  height: 8rem;
+  width: 8rem;
 }
