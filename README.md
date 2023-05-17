@@ -48,3 +48,7 @@
 
 - You will need 3 states in this project
 - CSS:clip-path. Read more here: `https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path`
+
+
+## Deploy Link
+https://ubiquitous-centaur-8ac48a.netlify.app
