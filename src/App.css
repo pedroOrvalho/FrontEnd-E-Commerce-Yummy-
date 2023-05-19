@@ -1,61 +1,183 @@
+/*--------------------------- General ---------------------------*/
+.App {
+	font-family: "Rajdhani", sans-serif;
+}
+/*--------------------------- Form ---------------------------*/
+
+.form_container {
+	display: flex;
+	justify-content: center;
+}
+
 /*--------------------------- Navbar ---------------------------*/
+
 .navbar_container {
-  display: flex;
-  justify-content: space-around;
-  background-color: antiquewhite;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	background-color: antiquewhite;
+	align-items: center;
+	padding: 0px 10px;
+	height: 3.5rem;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.176);
+}
+
+.nav_logo_container {
+	display: flex;
+	align-items: center;
+}
+
+.nav_logo_container h1 {
+	margin: 0 0;
+	font-size: 3.5rem;
 }
 
 .nav_logo {
-  width: 60px;
+	width: 50px;
 }
 
 .nav_list {
-  display: flex;
+	display: flex;
 }
 
 .nav_list li {
-  list-style-type: none;
-  padding: 0 1rem;
+	list-style-type: none;
+	padding: 0 1rem;
+	font-size: 1.5rem;
 }
-
 
 /*--------------------------- Home ---------------------------*/
 
-.home_pic{
-  display: flex;
-  height: 42rem;
-  width: 100%;
-  background-image: url("./images/home/food.jpeg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid black;
+.home_pic {
+	display: flex;
+	height: 42rem;
+	width: 100%;
+	background-image: url("./images/home/food.jpeg");
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.176);
 }
 
-.home_content{
-  margin: 4rem 20%;
-  text-align: center;
+.home_pic h1 {
+	font-size: 3.5rem;
+	font-weight: 500;
 }
 
-.home_content h2{
-  margin-top: 0;
+.home_content {
+	margin: 4rem 15%;
+	text-align: center;
 }
 
-.home_content p{
-  padding: 1rem 0rem;
-  padding-bottom: 3rem;
+.home_content h2 {
+	margin-top: 0;
+	font-size: 2.3rem;
+	font-weight: 500;
 }
 
-.round_pic_container{
-  display: flex;
-  justify-content: space-around;
+.home_content p {
+	padding: 0rem 0rem;
+	padding-bottom: 3rem;
+	font-size: 1.3rem;
 }
 
-.round_pic{
-  border-radius: 100px;
-  height: 8rem;
-  width: 8rem;
+.round_pic_container {
+	display: flex;
+	justify-content: space-between;
 }
+
+.round_pic {
+	border-radius: 100px;
+	height: 10rem;
+	width: 10rem;
+}
+
+/*--------------------------- Recipe ---------------------------*/
+
+.user_search {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.recipe_list_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2rem 0;
+}
+
+.recipe_item_container {
+	justify-self: center;
+}
+
+.no_results {
+	position: relative;
+	left: 100%;
+	text-align: center;
+}
+
+.no_results p {
+	width: 100%;
+	font-size: 4rem;
+	font-weight: 400;
+}
+
+/*--------------------------- Favorite ---------------------------*/
+.favorite_container h1 {
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 400;
+}
+
+.favorite_item_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.item_content {
+	font-size: 1.5rem;
+	width: 20rem;
+	text-align: center;
+}
+
+.item_name {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.item_content span {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.favorite_item_container img {
+	width: 175px;
+	height: 175px;
+}
+
+/*--------------------------- Contact ---------------------------*/
+
+.contact_container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem 0rem;
+}
+
+.contact_container p {
+	margin: 0.8rem 0;
+}
+
+span {
+	font-weight: 600;
+}
+
+#contact {
+	margin: 0 0;
+}
+/*--------------------------- Extra ---------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
