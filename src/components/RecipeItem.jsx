@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { styled } from "@mui/material/styles";
 import {
 	Card,
@@ -26,16 +27,26 @@ const ExpandMore = styled((props) => {
 	}),
 }));
 
-export default function RecipeItem({ recipeItem, setFavorite }) {
+export default function RecipeItem({ recipeItem, favorite, setFavorite }) {
 	const [expanded, setExpanded] = useState(false);
-  
-  function handleClick () {
-    setFavorite(recipeList => [...recipeList, recipeItem])
-  }
+
+	function handleClick() {
+		if (isAlreadyFavorite) {
+			setFavorite((prevFavorites) =>
+				prevFavorites.filter((item) => item.idMeal !== recipeItem.idMeal)
+			);
+		} else {
+			setFavorite((prevFavorites) => [...prevFavorites, recipeItem]);
+		}
+	}
 
 	const handleExpandClick = () => {
 		setExpanded(!expanded);
 	};
+
+	const isAlreadyFavorite = favorite.some(
+		(favorite) => favorite.idMeal === recipeItem.idMeal
+	);
 
 	return (
 		<div key={recipeItem.idMeal} className="recipe_item_container">
@@ -43,7 +54,12 @@ export default function RecipeItem({ recipeItem, setFavorite }) {
 				<CardHeader
 					sx={{ textAlign: "center" }}
 					avatar={
-						<Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+						<Avatar
+							sx={{
+								bgcolor: red[500],
+							}}
+							aria-label="recipe"
+						>
 							{recipeItem.strCategory.slice(0, 1)}
 						</Avatar>
 					}
@@ -73,7 +89,11 @@ export default function RecipeItem({ recipeItem, setFavorite }) {
 					</Typography>
 				</CardContent>
 				<CardActions disableSpacing>
-					<IconButton aria-label="add to favorites" onClick={handleClick}>
+					<IconButton
+						aria-label="add to favorites"
+						onClick={handleClick}
+						color={isAlreadyFavorite ? "error" : "default"}
+					>
 						<FavoriteIcon />
 					</IconButton>
 					<ExpandMore

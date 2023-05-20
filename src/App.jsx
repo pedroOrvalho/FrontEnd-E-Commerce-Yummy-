@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";
 import Recipe from "./pages/Recipe";
@@ -15,7 +16,10 @@ function App() {
 			<Navbar favorite={favorite} />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/recipe" element={<Recipe setFavorite={setFavorite} />} />
+				<Route
+					path="/recipe"
+					element={<Recipe favorite={favorite} setFavorite={setFavorite} />}
+				/>
 				<Route
 					path="/favorite"
 					element={<Favorite favorite={favorite} setFavorite={setFavorite} />}
