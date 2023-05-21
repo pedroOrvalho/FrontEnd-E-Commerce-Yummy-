@@ -141,13 +141,20 @@
 	text-align: center;
 	font-size: 4rem;
 	font-weight: 400;
+  align-content: center;
 }
 
 .favorite_item_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem 0;
+	padding: 1rem 0;
+}
+
+.item_content_container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .favorite_no_results{
@@ -158,7 +165,7 @@
 
 .item_content {
 	font-size: 1.5rem;
-	width: 20rem;
+	width: 22rem;
 	text-align: center;
 }
 
@@ -173,8 +180,9 @@
 }
 
 .favorite_item_container img {
-	width: 175px;
-	height: 175px;
+	width: 180px;
+	height: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.522)
 }
 
 .delete_button{

@@ -82,9 +82,9 @@ export default function RecipeItem({ recipeItem, favorite, setFavorite }) {
 					</Typography>
 					<Typography variant="body2" color="text.secondary" component={"div"}>
 						<ol>
-							<li>{recipeItem.strIngredient1}</li>
-							<li>{recipeItem.strIngredient2}</li>
-							<li>{recipeItem.strIngredient3}</li>
+							<li>{recipeItem.strIngredient1}: {recipeItem.strMeasure1}</li>
+							<li>{recipeItem.strIngredient2}: {recipeItem.strMeasure2}</li>
+							<li>{recipeItem.strIngredient3}: {recipeItem.strMeasure3}</li>
 						</ol>
 					</Typography>
 				</CardContent>
